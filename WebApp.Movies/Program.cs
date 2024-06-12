@@ -1,3 +1,5 @@
+using Shared_WebAPI.Movies.Services.Implemenations;
+
 namespace WebApp.Movies
 {
     public class Program
@@ -8,6 +10,8 @@ namespace WebApp.Movies
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddWebApiMovieServiceClient("https://localhost:7020");
 
             var app = builder.Build();
 
